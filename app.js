@@ -14,9 +14,8 @@ app.get('/',function(request, response){
     response.render('index.ejs',{title: 'Home'})
 });
 
-var http = require('http')
-var port = process.env.PORT || 1337;
-http.createServer(function(req, res) {
-  res.writeHead(200, { 'Content-Type': 'text/plain' });
-  res.end('Hello World\n');
-}).listen(port);
+var server = app.listen(3000, function(){
+    var host = server.address().address;
+    var port = process.env.PORT || 3000;
+    console.log('Listening at http://%s:%s', host , port)
+});
