@@ -95,5 +95,5 @@ var http = require('http')
 var port = process.env.PORT || 1337;
 
 var server = app.listen(port, function(){
-    console.log('Listening at http://%s:%s', host , port)
+    console.log('Listening at http://%s' , port)
 });
