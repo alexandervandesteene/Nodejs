@@ -14,8 +14,9 @@ app.get('/',function(request, response){
     response.render('index.ejs',{title: 'Home'})
 });
 
-var server = app.listen(3000, function(){
+app.set('port',process.env.PORT || 3000);
+
+var server = app.listen(app.get('port', function(){
     var host = server.address().address;
-    var port = process.env.PORT || 3000;
     console.log('Listening at http://%s:%s', host , port)
 });
