@@ -10,13 +10,9 @@ app.set('view engine', 'ejs');
 app.use(bodyParser());
 
 
-app.get('/',function(request, response){
-    response.render('index.ejs',{title: 'Home'})
-});
-
-app.set('port',process.env.PORT || 3000);
-
-var server = app.listen(app.get('port'), function(){
-    var host = server.address().address;
-    console.log('Listening at http://%s:%s', host , port)
-});
+var http = require('http')
+var port = process.env.PORT || 1337;
+http.createServer(function(req, res) {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end('Hello World\n');
+}).listen(port);
