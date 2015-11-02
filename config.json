@@ -1,7 +1,6 @@
 {
-  "host": "localhost",
-  "user": "root",
-  "password": "root",
-  "database": "node",
-  "port" : 8889
+  "host": "eu-cdbr-azure-west-c.cloudapp.net",
+  "user": "bdbcc80ddafbf5",
+  "password": "56648e4a",
+  "database": "acsm_4c59fcdd616172c"
 }
