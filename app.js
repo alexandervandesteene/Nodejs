@@ -10,6 +10,10 @@ app.set('view engine', 'ejs');
 app.use(bodyParser());
 
 
+app.get('/',function(request, response){
+    response.render('index.ejs',{title: 'Home'})
+});
+
 var http = require('http')
 var port = process.env.PORT || 1337;
 http.createServer(function(req, res) {

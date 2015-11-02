@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../views/head %>
+<body>
+<header>
+    <% include ../views/header %>
+</header>
+
+<main class="container">
+
+    <div class="container">
+        <h1>List of logs</h1>
+    </div>
+
+    <table class="table table-striped table-bordered table-hover">
+        <tr><th>Datum</th><th>Url</th></tr>
+
+        <% for(var i=0; i<Result.length; i++) {%>
+        <tr><td><%= Result[i].at %></td><td><%= Result[i].url %></td>
+            <% } %>
+    </table>
+</main>
+</body>
+</html>
